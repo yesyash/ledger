@@ -1,0 +1,32 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": false,
+  "prettier.tabWidth": 2,
+  "prettier.printWidth": 120,
+  "editor.rulers": [
+    {
+      "column": 120
+    }
+  ],
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "prettier.requireConfig": true,
+
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+
+  "eslint.run": "onSave",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
