@@ -1,39 +1,29 @@
-import { Image, StyleSheet, Platform } from "react-native"
+import { StyleSheet } from "react-native"
 
-import { HelloWave } from "@/components/HelloWave"
-import ParallaxScrollView from "@/components/ParallaxScrollView"
 import { ThemedText } from "@/components/ThemedText"
 import { ThemedView } from "@/components/ThemedView"
+import { SafeAreaView } from "react-native-safe-area-context"
 
 export default function HomeScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
-      headerImage={<Image source={require("@/assets/images/partial-react-logo.png")} style={styles.reactLogo} />}
-    >
+    <SafeAreaView style={styles.container}>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Hello!</ThemedText>
-        <HelloWave />
+        <ThemedText type="title">Hello world!</ThemedText>
       </ThemedView>
-    </ParallaxScrollView>
+    </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingVertical: 24,
+    paddingHorizontal: 16,
+    backgroundColor: "#fff",
+  },
   titleContainer: {
     flexDirection: "row",
     alignItems: "center",
     gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: "absolute",
   },
 })
